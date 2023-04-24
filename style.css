@@ -1,0 +1,26 @@
+@import url(wave-haikei.png);
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    background-image: url(wave-haikei.png);
+}
+
+html,body, .wrapper{
+    height: 100%;
+
+}
+
+body{
+    display: grid;
+    place-items: center;
+    padding: 0 24px;
+    background-repeat: no-repeat;
+    background size: cover;
+    animation: rotate 6s infinite alterante linear; 
+}
+
+.login.form{
+    width: 100%;
+
+
+}
