@@ -1,26 +1,114 @@
 @import url(wave-haikei.png);
-*{
+
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
-    background-image: url(wave-haikei.png);
+
+
 }
 
-html,body, .wrapper{
+html,
+body,
+.wrapper {
     height: 100%;
 
 }
 
-body{
+body {
     display: grid;
     place-items: center;
     padding: 0 24px;
-    background-repeat: no-repeat;
-    background size: cover;
-    animation: rotate 6s infinite alterante linear; 
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
-.login.form{
+.login-card {
+    z-index: 3;
+    padding: 70px 30px 44px;
+    margin: 1rem auto;
+    position: relative;
+    width: 30vw;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+}
+
+.login-card>h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.login-card>h3 {
+    font: 1rem;
+    font-weight: 500;
+    margin: 0 0 30px;
+    color: rgb(0, 0, 0, 0.38)
+}
+
+.login-form {
+    display: grid;
+    margin: 0;
+    gap: 16px;
+}
+
+.login-form>input,
+.login-form>button {
     width: 100%;
+    height: 50px;
+}
 
+.login-form>input {
+    border: 2px solid #ebebeb;
+    padding: 0 16px;
+    font-size: 15px;
+    border-radius: 1.25rem;
+    transition: all 1s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+.login-form>button {
+    width: 100%;
+    cursor: pointer;
+    background: #4747eb;
+    color: #ebebeb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 1.25rem;
+    letter-spacing: 2px;
+    border: 0;
+    transition: all 1s;
+}
+
+.login-form>button:hover {
+    background-color: #10449a;
+
+}
+
+.login-form>a {
+    color: #10449a;
+    text-align: left;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+}
+
+@keyframes rotate {
+    100% {
+        background-position: 15% 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .login-card {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .login-card {
+        width: 55vw;
+    }
 }
